@@ -86,6 +86,16 @@ export const variants = stylex.create({
       color: '#1d4ed8',
     },
   },
+  destructive: {
+    backgroundColor: '#ef4444',
+    color: 'white',
+    ':hover': {
+      backgroundColor: '#dc2626',
+    },
+    ':active': {
+      backgroundColor: '#b91c1c',
+    },
+  },
   unstyled: {
     backgroundColor: 'transparent',
     color: 'inherit',

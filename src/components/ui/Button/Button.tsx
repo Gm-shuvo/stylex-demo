@@ -16,7 +16,6 @@ type ButtonProps = {
   iconLeft?: React.ReactNode;
   iconRight?: React.ReactNode;
   styleX?: stylex.StyleXStyles;
-  className?: string;
   children: React.ReactNode;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
@@ -42,11 +41,12 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <Comp
         ref={ref}
+        {...props}
         disabled={isDisabled}
+        
         {...stylex.props(button.base, variants[variant], sizes[size], styleX, 
           isDisabled && button.disabled
         )}
-        {...props}
       >
         {loading ? (
           <div {...stylex.props(button.loading, variants[variant])}>
