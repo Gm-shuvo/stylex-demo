@@ -3,8 +3,7 @@ import * as stylex from '@stylexjs/stylex';
 // A constant can be used to avoid repeating the media query
 const DARK = '@media (prefers-color-scheme: dark)';
 
-export const 
-colors = stylex.defineVars({
+export const colors = stylex.defineVars({
   primaryText: {default: 'black', [DARK]: 'white'},
   secondaryText: {default: '#333', [DARK]: '#ccc'},
   accent: {default: 'blue', [DARK]: 'lightblue'},
@@ -15,6 +14,7 @@ colors = stylex.defineVars({
   primary: '#4f46e5',
   text: '#111827',
   mutedText: '#6b7280',
+  dialogOverlay: 'rgba(0, 0, 0, 0.5)'
 });
 
 export const sizes = stylex.defineVars({

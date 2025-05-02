@@ -1,3 +1,4 @@
+
 import * as React from 'react'
 import * as DialogPrimitive from '@radix-ui/react-dialog'
 import { XIcon } from 'lucide-react'
@@ -29,7 +30,7 @@ function DialogContent({
   ...props
 }: React.ComponentProps<typeof DialogPrimitive.Content> & { styleX?: stylex.StyleXStyles }) {
   return (
-    <DialogPortal>
+    <>
       <DialogOverlay />
       <DialogPrimitive.Content {...stylex.props(styles.content, styleX)} {...props}>
         {children}
@@ -37,7 +38,7 @@ function DialogContent({
           <XIcon />
         </DialogPrimitive.Close>
       </DialogPrimitive.Content>
-    </DialogPortal>
+    </>
   )
 }
 

@@ -9,6 +9,6 @@ export const dracula = stylex.createTheme(colors, {
   primaryText: {default: 'purple', [DARK]: 'lightpurple'},
   secondaryText: {default: 'pink', [DARK]: 'hotpink'},
   accent: 'red',
-  background: {default: '#555', [DARK]: 'black'},
+  background: {default: 'black', [DARK]: 'black'},
   lineColor: 'red',
 });

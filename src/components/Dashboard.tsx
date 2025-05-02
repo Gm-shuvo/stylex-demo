@@ -10,6 +10,9 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "./ui/Dialog/Dialog";
+import { dracula } from "../theme";
+import { colors } from "../tokens.stylex";
+import { ThemeToggleButton } from "./ThemeToggoleButton";
 
 const buttonOverrite = stylex.create({
   base: {
@@ -29,8 +32,7 @@ const buttonOverrite2 = stylex.create({
 
 const dialogStyles = stylex.create({
   title: {
-    color: "Black",
-    backgroundColor: "white"
+    color: colors.primaryText,
   },
 });
 
@@ -77,7 +79,9 @@ const Dashboard = () => {
         Unstyled
       </Button>
 
-      <Dialog>
+      <ThemeToggleButton/>
+
+      <Dialog {...stylex.props(dracula)}>
         <DialogTrigger asChild>
           <Button>Open Dialog</Button>
         </DialogTrigger>

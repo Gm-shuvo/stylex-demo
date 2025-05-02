@@ -1,11 +1,12 @@
 // dialog.stylex.ts
 import * as stylex from '@stylexjs/stylex';
+import { colors, shadows } from '../../../tokens.stylex';
 
 export const styles = stylex.create({
   overlay: {
     position: 'fixed',
     inset: 0,
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    backgroundColor: colors.dialogOverlay,
     zIndex: 1000,
   },
   content: {
@@ -13,13 +14,13 @@ export const styles = stylex.create({
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    backgroundColor: '#fff',
+    backgroundColor: colors.background,
     borderRadius: 8,
     padding: 24,
     width: '90%',
     maxWidth: 500,
     zIndex: 1001,
-    boxShadow: '0 10px 25px rgba(0, 0, 0, 0.2)',
+    boxShadow: shadows.large,
   },
   closeButton: {
     position: 'absolute',
